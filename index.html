@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanillaz Second Hand Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <h1 class="shop-title">Vanillaz Second Hand Shop</h1>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#about-us-section">About</a></li>
+                <li><a href="#products-section">Products</a></li>
+                <li><a href="#contact-us-section">Contact</a></li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="dropdown" id="account-dropdown">
+            <button class="dropbtn"><i class="fas fa-user"></i> Account</button>
+            <div class="dropdown-content">
+                <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+                <a href="#"><i class="fas fa-user-circle"></i> My Account</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a href="#"><i class="fas fa-credit-card"></i> Checkout</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Main View) -->
+        <section id="hero-section">
+            <div class="hero-content">
+                <h2>Discover Unique Second-Hand Treasures</h2>
+                <p>Sustainable shopping for the conscious consumer. Find your perfect pre-loved item today.</p>
+                <div class="hero-buttons">
+                    <a href="#products-section" class="btn primary-btn">Shop Now</a>
+                    <a href="#about-us-section" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage clothing collection">
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section id="featured-categories">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="category-container">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Vintage Clothing">
+                    <h3>Vintage Clothing</h3>
+                    <a href="#" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Electronics">
+                    <h3>Electronics</h3>
+                    <a href="#" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Home Decor">
+                    <h3>Home Decor</h3>
+                    <a href="#" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Accessories">
+                    <h3>Accessories</h3>
+                    <a href="#" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products-section">
+            <h2 class="section-title">Latest Products</h2>
+            <div id="sorting-filter-options">
+                <div class="filter-group">
+                    <label for="sort-by"><i class="fas fa-sort"></i> Sort By:</label>
+                    <select id="sort-by">
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-by"><i class="fas fa-filter"></i> Filter By:</label>
+                    <select id="filter-by">
+                        <option value="all">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="home-garden">Home & Garden</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-item" id="product-1">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage Leather Jacket">
+                    </div>
+                    <div class="product-details">
+                        <h3>Vintage Leather Jacket</h3>
+                        <p class="product-description">Authentic 1970s leather jacket in excellent condition</p>
+                        <p class="product-price">$99.99</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" id="product-2">
+                    <div class="product-badge">Sale</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage Camera">
+                    </div>
+                    <div class="product-details">
+                        <h3>Vintage Film Camera</h3>
+                        <p class="product-description">Fully functional classic film camera from the 1960s</p>
+                        <p class="product-price">$149.99</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" id="product-3">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Ceramic Vase">
+                    </div>
+                    <div class="product-details">
+                        <h3>Handcrafted Ceramic Vase</h3>
+                        <p class="product-description">Beautiful artisan vase perfect for any home decor</p>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item" id="product-4">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vintage Record Player">
+                    </div>
+                    <div class="product-details">
+                        <h3>Vintage Record Player</h3>
+                        <p class="product-description">Restored record player with modern connectivity options</p>
+                        <p class="product-price">$199.99</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            <button class="add-to-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="load-more"><i class="fas fa-sync"></i> Load More</button>
+            
+            <div id="pagination-controls">
+                <a href="#" class="pagination active">1</a>
+                <a href="#" class="pagination">2</a>
+                <a href="#" class="pagination">3</a>
+                <a href="#" class="pagination">4</a>
+                <a href="#" class="pagination">5</a>
+                <a href="#" class="pagination"><i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="pagination"><i class="fas fa-step-forward"></i></a>
+                <a href="#" class="pagination"><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us-section">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Store">
+                </div>
+                <div class="about-text">
+                    <p>Welcome to <strong>Vanillaz Second Hand Shop</strong> – where pre-loved treasures find a new home! We believe in giving fashion and everyday essentials a second chance while promoting sustainability in style.</p>
+                    <p>From vintage apparel to rare accessories and home décor, our curated collection is full of hidden gems. Whether you're a bargain hunter, a vintage lover, or an eco-conscious shopper, there's something special waiting for you at Vanillaz.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>At Vanillaz, our goal is simple: to make second-hand shopping an exciting, stylish, and eco-friendly experience. We believe in quality, authenticity, and giving back to the planet by reducing waste, one amazing find at a time.</p>
+                </div>
+            </div>
+
+            <h3 class="team-title">Meet Our Team</h3>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Emily - Founder">
+                    <h4>Emily Johansson</h4>
+                    <p class="team-role">Founder & Vintage Expert</p>
+                    <p>Emily's passion for second-hand fashion started with a love for unique, timeless pieces. She ensures Vanillaz stays fresh and stylish!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Oscar - Store Manager">
+                    <h4>Oscar Lindström</h4>
+                    <p class="team-role">Store Manager</p>
+                    <p>A customer favorite, Oscar curates our collection, ensuring you find the best pre-loved treasures.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sofia - Sustainability Advocate">
+                    <h4>Sofia Bergqvist</h4>
+                    <p class="team-role">Sustainability Advocate</p>
+                    <p>Sofia is the driving force behind our eco-friendly mission, finding new ways to make shopping more sustainable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-description">Have a question or want to visit us? Find us at our locations in Sweden!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="locations">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Stockholm Store</h4>
+                                <p>Drottninggatan 55, Stockholm</p>
+                                <p><i class="fas fa-phone"></i> +46 8 123 45 67</p>
+                            </div>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Gothenburg Store</h4>
+                                <p>Avenyn 10, Gothenburg</p>
+                                <p><i class="fas fa-phone"></i> +46 31 987 65 43</p>
+                            </div>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Malmö Store</h4>
+                                <p>Storgatan 22, Malmö</p>
+                                <p><i class="fas fa-phone"></i> +46 40 555 44 33</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="store-hours">
+                        <h4><i class="far fa-clock"></i> Store Hours</h4>
+                        <ul>
+                            <li><span>Monday - Friday:</span> 10:00 - 19:00</li>
+                            <li><span>Saturday:</span> 10:00 - 17:00</li>
+                            <li><span>Sunday:</span> 12:00 - 16:00</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" id="contact-button"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8135.120355991885!2d18.06385!3d59.33258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6799554e87%3A0x6562d2c842903003!2sDrottninggatan%2C%20Stockholm%2C%20Sweden!5e0!3m2!1sen!2sus!4v1625764215662!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials-section">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Customer 1">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I found the most amazing vintage dress at Vanillaz! The quality was incredible, and the price was even better. Will definitely be back!"</p>
+                        <h4>Linnea Andersson</h4>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Customer 2">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"The staff at Vanillaz are so knowledgeable and helpful. They helped me find a vintage record player that works perfectly. Great service!"</p>
+                        <h4>Johan Svensson</h4>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Customer 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I love that I can shop sustainably at Vanillaz. Their collection is always changing, and I've found some real treasures there. Highly recommend!"</p>
+                        <h4>Maria Eriksson</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media-section">
+            <h2 class="section-title">Connect with Us</h2>
+            <p class="section-description">Follow us on social media for exclusive offers, new arrivals, and sustainable living tips!</p>
+            
+            <ul class="social-media-list">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+
+            <div class="instagram-feed">
+                <h3>Follow Our Instagram <i class="fab fa-instagram"></i></h3>
+                <div class="instagram-grid">
+                    <a href="#" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Instagram Post 1">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Instagram Post 2">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Instagram Post 3">
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Instagram Post 4">
+                    </a>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h3><i class="far fa-envelope"></i> Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates, exclusive offers, and sustainable living tips delivered to your inbox.</p>
+                </div>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" id="newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Vanillaz Second Hand Shop</h3>
+                <p>Sustainable shopping for the conscious consumer since 2015.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#about-us-section">About Us</a></li>
+                    <li><a href="#products-section">Products</a></li>
+                    <li><a href="#contact-us-section">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Drottninggatan 55, Stockholm</li>
+                    <li><i class="fas fa-phone"></i> +46 8 123 45 67</li>
+                    <li><i class="fas fa-envelope"></i> info@vanillaz.se</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vanillaz Second Hand Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
