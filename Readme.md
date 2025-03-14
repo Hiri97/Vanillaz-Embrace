@@ -4,7 +4,7 @@
 
 Elegant Boutique is a modern, responsive e-commerce website template designed for small to medium-sized retail businesses. With a clean, sophisticated design and intuitive user interface, this template provides everything needed to showcase products and engage customers effectively.
 
-![Screenshot](/Code%20p1/assets/images/Screenshot_1.png)
+![Screenshot](/assets/images/Screenshot_1.png)
 
 ## Features
 
